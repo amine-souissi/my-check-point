@@ -1,0 +1,49 @@
+var string="" ;
+const prompts = require('prompts');
+
+const question = {type: 'text',message: 'Enter your string'} ;
+
+(async () => {
+   string = await prompts(question);
+
+   string = string.undefined ; 
+   //console.log(string.undefined) ; 
+
+   if (string.length !=0) {
+		//var string = "window prompt Enter a string" 
+
+		let vowels = ["a" , "e" , "i" , "o" , "u"] ; 
+		var number_of_vowels = 0 ; 
+		var number_of_words = 0 ; 
+
+		for (let i = 0; i < string.length; i++) {
+		  		char = string[i] ;
+
+		  		for (let j = 0; j < vowels.length; j++) {
+		  			if (char == vowels[j]){
+		  				number_of_vowels+=1 ;
+		  			}
+
+		  		} 
+
+				var number_of_words = 1 ; 
+		  		for (let k = 0; k < string.length-1; k++) {
+					if ((string[k] == " " ) && (string[k+1] != " ")){
+						number_of_words+=1 ;
+						
+					}
+
+		  		}
+
+
+		}
+
+		console.log(number of vowels is  ${number_of_vowels} ); 
+		console.log(number of words is  ${number_of_words} ) ;
+
+
+
+   }
+
+
+})();
