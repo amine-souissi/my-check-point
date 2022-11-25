@@ -1,0 +1,50 @@
+let set1 = [3,1,7,9] ;
+let set2 = [2,4,1,9,3] ;
+
+let sum = [] ;
+i = 0 ;
+while (i < set1.length){
+
+	var counter = 0; 
+	for (let j = 0; j < set2.length; j++) {
+
+		if (set1[i] == set2[j]){
+			counter+=1 ;
+
+		}
+		
+	}
+	if (counter == 0)
+		sum.push(set1[i]) ; 
+	i+=1
+}
+
+
+
+i = 0 ;
+while (i < set2.length){
+
+	var counter = 0; 
+	for (let j = 0; j < set1.length; j++) {
+
+		if (set2[i] == set1[j]){
+			counter+=1 ;
+
+		}
+		
+	}
+	if (counter == 0)
+		sum.push(set2[i]) ; 
+	i+=1
+}
+
+
+var total_sum = 0 ;
+for (let i = 0; i < sum.length; i++) {
+	total_sum+=sum[i] ;
+
+	
+	}
+
+
+console.log(the total sum is ${total_sum}) ;
